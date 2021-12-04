@@ -1,0 +1,476 @@
+/*------ Styling the Wrappers -------------------*/
+
+body {
+    position: relative;
+    -ms-overflow-style: scrollbar; /* This code fixes the IE scrollbar issue */
+}
+
+#wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 1100px;
+    overflow-x: hidden;
+    overflow-y: hidden; 
+}
+
+#sidebar-wrapper {
+    z-index: 1;
+    position: absolute;
+    top: 0; 
+    width: 235px;
+    min-height: 1100px;
+    border: 2px solid black;
+    background-color: #CC0000;
+    right: -235px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    min-height: 1100px;
+    position: relative;
+    right: 0; 
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; 
+}
+
+/*------ Styling the Sidebar -------------------*/
+
+.nav-stacked > li + li {
+    margin-top: 0px;
+}
+
+.nav-tabs {
+    border-bottom: 0; 
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    font-size: 14px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+.sidebar-nav li a {
+    display: block;
+    padding: 15px;
+    background: #CC0000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar-nav li a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.sidebar-nav li a:after {
+    content: url(../Images/nav_arrow.png);
+    float: right;
+}
+
+/*Moving sidebar to the left when toggled and fixing it */
+#wrapper.toggled #sidebar-wrapper {
+    right: 0;
+    position: fixed;
+}
+
+/*Moving page content to left */
+#wrapper.toggled #page-content-wrapper {
+    right: 235px;
+}
+
+/*------ Styling the Navbar -------------------*/
+
+.navbar { 
+    background-image: none; 
+    border-radius: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: black;
+    font-weight: 600;
+    border: 1px solid black;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+    background-color: white;
+    color: black;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: white;  /*Sets the text hover color and text hover background color on navbar*/
+    background-color: black;
+}
+
+/*changes the background color of the logo*/
+.navbar .navbar-brand {
+    background-color: #CC0000;
+}
+
+#logo {
+    height: 30px;
+    width: 200px;
+}
+
+/*changes the background color of the logo on hover*/
+.navbar-default .navbar-brand:hover {
+    background-color: black; 
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:active,
+.navbar-default .navbar-toggle:focus {
+    background-color: black;
+    color: white;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    margin-right: 25px;
+}
+
+.navbar-default .navbar-toggle:hover{
+    background-color: #CC0000;
+}
+
+.navbar .container-fluid {
+    padding-right: 0;
+}
+
+/*------ Styling the Jumbotron -------------------*/
+
+.jumbotron { 
+    background-color: #CC0000;
+    text-align: center;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-top: 75px;
+    padding-bottom: 60px;
+    margin-top: 40px;
+}
+
+.jumbotron h1, .jumbotron p { 
+    color: #ffffff;
+}
+
+/*------ Styling the Quote Button--------------*/
+
+.btn_quote, .btn_quote:hover {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    width: 100%;
+}
+
+/*------ Styling Testimonials Section--------------*/
+
+#customer_experience {
+    padding-top: 20px;
+    padding-bottom: 50px;    
+}
+
+#testimonials_heading {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.customers {
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 15px;
+}
+
+.testimonials {
+    padding-top: 20px;
+    padding-bottom: 20px;   
+    border: 1px solid black; 
+    font-style: italic;
+    color: black;
+}
+
+.testim_name {
+    text-align: left;
+    color: black;
+}
+
+/*------ Styling the Services Icons --------------*/
+
+#services {
+    text-align: center;
+    padding-bottom: 25px;    
+}
+
+.logo-small {
+    color: #CC0000;
+    font-size: 50px;
+}
+
+/*------ Styling the Fleet Section--------------*/
+
+.img-responsive {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 250px;
+}
+
+#fleet_heading {
+    padding-top: 10px;
+    text-align: center;
+}
+
+#fleet {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/*------ Styling the Fleet Carousel --------------*/
+
+#fleet_carousel {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;  
+}
+
+#fleet_carousel_heading {
+    padding-top: 20px;
+    text-align: center;    
+}
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: black;
+}
+
+.item span {
+    font-style: normal;
+}  
+
+.carousel-inner > .item > img {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 25px;
+}
+
+/*------ Styling the Contact Section--------------*/
+
+#contact_section {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+#transfer_pic {
+    width: 100%;
+    max-height: 200px;
+}
+
+.btn-cust {
+    color: #333;
+    background-color: #e7e7e7;  
+    border-color: #adadad;  
+}
+
+.btn-cust:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.about_header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.contact_header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.ac_paragraph {
+    margin-bottom: 15px;
+    font-weight: normal;
+    font-size: 110%;
+}
+
+/*------ Styling the footer--------------*/
+
+footer {
+    /*background-color: #e7e7e7;*/
+}
+
+footer .footer-right ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+footer .footer-right ul li {
+    display: inline;
+    font-size: 15px;
+    font-weight: bold;
+    border-right: 1px solid black;
+}
+
+#chev {
+    border-right: 0;
+}
+
+footer .footer-right ul li a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+footer .footer-right a:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+footer .footer-left {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    text-indent: 50px;
+}
+
+/*------ Media Enquiries--------------*/
+
+@media (max-width: 767px) { 
+   
+    footer .text-foot-left {
+        text-align: center;
+    } 
+
+    footer .footer-left {
+        text-indent: 0;
+    }
+
+    footer .text-foot-right {
+        margin-top: 15px;
+        margin-bottom: -10px;
+        text-align: center;
+    }
+
+    .about_header {
+        text-align: center;
+    }
+
+    .contact_header {
+        text-align: center;
+    }
+
+    #contact_number {
+        text-align: center;
+    }
+
+}
+
+@media (min-height: 40.125em) {
+    .picker--time .picker__holder {
+        font-size: 1em;
+    }
+}
+
+/*------ Styling the Quote Form Components--------------*/
+
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+    background-color: red;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+
+.bootstrap-datetimepicker-widget table td.today:before {
+    border-bottom: 7px solid red;
+}
+
+select {
+    -webkit-appearance: textfield;
+} 
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder {
+    text-align: center;
+}
+
+::-moz-placeholder {
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    text-align: center;
+}
+
+#time_wrapper {
+    position: relative;
+}
+
+.picker__list-item:hover {
+    background-color: red;
+    color: white; 
+}
+
+.picker--focused .picker__list-item--highlighted {
+    background-color: red;
+}
+
+.picker__list-item--highlighted {
+    border-color: black;
+}
+
+.picker__list-item:hover {
+    border-color: black;
+}
+
+.form-control[readonly] {
+    background-color: #fff
+}
+
+.picker__frame {
+    max-height: 300px;
+}
+
+.picker__list-item--selected, 
+.picker__list-item--selected:hover, 
+.picker--focused .picker__list-item--selected {
+    background: red;
+}   
+
+.picker {
+    font-size: inherit;
+}   
+
+.picker--time {
+    min-width: initial;  
+    max-width: initial; 
+}
+
+/*------ Color Scheme used----------------*/
+
+/* #CC0000 Boston University Red */
+
+
+
